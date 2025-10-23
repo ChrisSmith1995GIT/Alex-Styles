@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="stylesheet.css" />
+</head>
+<body>
+  <header>
+    <div class="logo">MyPortfolio</div>
+    <nav>
+      <ul>
+        <li><a href="#about" title="Learn more about me">About</a></li>
+        <li><a href="#projects" title="See my work">Projects</a></li>
+        <li><a href="#contact" title="Get in touch">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Hello, I'm <span class="accent">Alex</span></h1>
+    <p>Frontend Developer & Designer</p>
+    <button id="openModal">View My Mission</button>
+  </section>
+
+  <section id="about" class="about">
+    <h2>About Me</h2>
+    <p>I’m passionate about crafting responsive, visually engaging websites that deliver intuitive user experiences. My focus is on modern design and clean code.</p>
+  </section>
+
+  <section id="projects" class="projects">
+    <h2>Projects</h2>
+    <div class="project-grid">
+      <div class="project-card" title="Click to learn more!">
+        <h3>Portfolio Website</h3>
+        <p>A sleek personal website showcasing my skills and projects.</p>
+      </div>
+      <div class="project-card" title="Click to learn more!">
+        <h3>Weather App</h3>
+        <p>A responsive web app displaying live weather data using APIs.</p>
+      </div>
+      <div class="project-card" title="Click to learn more!">
+        <h3>Task Manager</h3>
+        <p>A modern to-do app with drag-and-drop and local storage.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Contact Me</h2>
+    <p>Let’s collaborate! Feel free to reach out below.</p>
+    <a href="mailto:alex@example.com" class="btn">Send Email</a>
+  </section>
+
+  <footer>
+    <p>© 2025 Alex | Designed with ❤️ using Copilot</p>
+  </footer>
+
+  <!-- Modal -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>My Mission</h2>
+      <p>To build accessible and aesthetically pleasing web experiences that combine creativity with functionality.</p>
+    </div>
+  </div>
+
+  <script>
+    // Modal interactivity
+    const modal = document.getElementById("modal");
+    const openModal = document.getElementById("openModal");
+    const closeModal = document.querySelector(".close");
+
+    openModal.onclick = () => modal.style.display = "block";
+    closeModal.onclick = () => modal.style.display = "none";
+    window.onclick = (event) => {
+      if (event.target === modal) modal.style.display = "none";
+    };
+  </script>
+</body>
+</html>
